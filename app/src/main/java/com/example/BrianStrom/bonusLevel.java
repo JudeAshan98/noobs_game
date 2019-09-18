@@ -17,8 +17,8 @@ public abstract class bonusLevel extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_bonus_level);
 
-        Intent testInt = new Intent();
-        EEt_extra = testInt.getStringExtra("test");
+//        Intent testInt = new Intent();
+//        EEt_extra = testInt.getStringExtra("test");
 
         btn1 = (Button)findViewById(R.id.StrtBtn);
         btn1.setOnClickListener(new View.OnClickListener(){
