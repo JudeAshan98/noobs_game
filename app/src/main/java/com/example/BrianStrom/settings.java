@@ -12,6 +12,7 @@ public class settings extends AppCompatActivity {
     String myT = "text";
     String takeExtra;
     Button btn;
+    Button btnbonus;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -29,6 +30,14 @@ public class settings extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+        btnbonus = (Button)findViewById(R.id.button2);
+        btnbonus.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(settings.this, bonusLevel.class);
+                intent.putExtra("test",myT);
+                startActivity(intent);
+            }
+        });
     }
 }
