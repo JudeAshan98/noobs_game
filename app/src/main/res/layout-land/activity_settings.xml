@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F2F31"
+    android:fadeScrollbars="true"
+    android:isScrollContainer="true"
+    android:scrollbarStyle="insideInset"
+    tools:context=".settings">
+
+
+    <Button
+        android:id="@+id/button"
+        android:layout_width="202dp"
+        android:layout_height="70dp"
+        android:background="@drawable/mybtn"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/more_games"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/button2"
+        app:layout_constraintHorizontal_bias="0.58"
+        app:layout_constraintStart_toEndOf="@+id/button5"
+        app:layout_constraintTop_toBottomOf="@+id/Settings_lbl"
+        app:layout_constraintVertical_bias="0.748" />
+
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="202dp"
+        android:layout_height="66dp"
+        android:background="@drawable/mybtn"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/credit"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Noti"
+        app:layout_constraintVertical_bias="0.496" />
+
+    <Button
+        android:id="@+id/button5"
+        android:layout_width="202dp"
+        android:layout_height="66dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:background="@drawable/mybtn"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:radius="31dip"
+        android:text="@string/highscore"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/sound" />
+
+    <Switch
+        android:id="@+id/sound"
+        android:layout_width="250dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="48dp"
+        android:background="@drawable/mybtn"
+        android:checked="false"
+        android:text="@string/sound"
+        android:textAlignment="center"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toStartOf="@+id/Noti"
+        app:layout_constraintHorizontal_bias="0.495"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Settings_lbl" />
+
+    <Switch
+        android:id="@+id/Noti"
+        android:layout_width="250dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="48dp"
+        android:layout_marginEnd="72dp"
+        android:layout_marginRight="72dp"
+        android:background="@drawable/mybtn"
+        android:paddingStart="10dp"
+        android:paddingLeft="10dp"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:text="@string/notifications"
+        android:textAllCaps="true"
+        android:textSize="18sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Settings_lbl" />
+
+    <TextView
+        android:id="@+id/Settings_lbl"
+        android:layout_width="283dp"
+        android:layout_height="66dp"
+        android:layout_marginTop="16dp"
+        android:drawingCacheQuality="high"
+        android:paddingLeft="60dp"
+        android:text="@string/settings"
+        android:textColor="#FF9800"
+        android:textSize="36sp"
+        app:fontFamily="sans-serif-condensed-medium"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
