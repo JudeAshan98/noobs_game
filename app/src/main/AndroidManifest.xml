@@ -9,7 +9,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".more_games"></activity>
+        <activity android:name=".mind_num_reader"></activity>
+        <activity android:name=".more_games" />
         <activity android:name=".bonus_game" />
         <activity android:name=".settings" />
         <activity android:name=".bonusLevel" />

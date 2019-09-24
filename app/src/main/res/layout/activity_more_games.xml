@@ -10,9 +10,10 @@
 
     <Button
         android:id="@+id/button7"
-        android:layout_width="182dp"
+        android:layout_width="150dp"
         android:layout_height="155dp"
-        android:text="Comming Soon!"
+        android:text="Coming Soon!"
+        android:background="@drawable/mybtn"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -22,11 +23,13 @@
         app:layout_constraintVertical_bias="0.44" />
 
     <Button
-        android:id="@+id/button3"
-        android:layout_width="182dp"
+        android:id="@+id/read_num"
+        android:layout_width="150dp"
         android:layout_height="155dp"
-        android:text="Read ny Mind"
         android:textAllCaps="false"
+        android:text="Read my Mind"
+        android:freezesText="true"
+        android:background="@drawable/mybtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.069"
@@ -36,9 +39,10 @@
 
     <Button
         android:id="@+id/button4"
-        android:layout_width="182dp"
+        android:layout_width="150dp"
         android:layout_height="155dp"
-        android:text="Comming Soon!"
+        android:text="Coming Soon!"
+        android:background="@drawable/mybtn"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -49,9 +53,10 @@
 
     <Button
         android:id="@+id/button6"
-        android:layout_width="182dp"
+        android:layout_width="150dp"
         android:layout_height="155dp"
-        android:text="Comming Soon!"
+        android:text="Coming Soon!"
+        android:background="@drawable/mybtn"
         android:textAllCaps="false"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
