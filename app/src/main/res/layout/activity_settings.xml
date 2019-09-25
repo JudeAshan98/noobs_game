@@ -60,7 +60,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Noti" />
+        app:layout_constraintTop_toBottomOf="@+id/noti" />
 
     <Switch
         android:id="@+id/sound"
@@ -72,7 +72,7 @@
         android:checked="false"
         android:textAlignment="center"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/Noti"
+        app:layout_constraintBottom_toTopOf="@+id/noti"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -80,7 +80,7 @@
 
 
     <Switch
-        android:id="@+id/Noti"
+        android:id="@+id/noti"
         android:layout_width="202dp"
         android:layout_height="66dp"
         android:background="@drawable/mybtn"

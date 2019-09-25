@@ -2,10 +2,15 @@ package com.example.BrianStrom;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.content.Context;
 import android.content.Intent;
+import android.media.AudioManager;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CompoundButton;
+import android.widget.Switch;
+import android.widget.Toast;
 
 public class settings extends AppCompatActivity {
 
@@ -13,6 +18,9 @@ public class settings extends AppCompatActivity {
     String takeExtra;
     Button btn;
     Button btnbonus;
+    Switch sound, noti;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -20,6 +28,9 @@ public class settings extends AppCompatActivity {
 
         Intent Myintent = new Intent();
         takeExtra = Myintent.getStringExtra("testExtra");
+
+        sound = (Switch)findViewById(R.id.sound);
+        noti  = (Switch)findViewById(R.id.noti);
 
         btn = (Button)findViewById(R.id.button);
         btn.setOnClickListener(new View.OnClickListener() {
@@ -39,5 +50,47 @@ public class settings extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+
+        //sound on off function
+
+        sound.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    unmute();
+                    Toast.makeText(getApplicationContext(),"Sound On",Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    mute();
+                    Toast.makeText(getApplicationContext(),"Sound Off",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+
+        //Notification on-Off Function
+        noti.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                if(isChecked){
+                    Toast.makeText(getApplicationContext(),"Notifications On",Toast.LENGTH_SHORT).show();
+                }
+                else
+                {
+                    Toast.makeText(getApplicationContext(),"Notifications Off",Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+    }
+    private void mute() {
+        //mute audio
+        AudioManager amanager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        amanager.setStreamMute(AudioManager.STREAM_NOTIFICATION, true);
+    }
+
+    public void unmute() {
+        //unmute audio
+        AudioManager amanager = (AudioManager) getSystemService(Context.AUDIO_SERVICE);
+        amanager.setStreamMute(AudioManager.STREAM_NOTIFICATION, false);
     }
 }

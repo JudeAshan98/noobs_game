@@ -42,7 +42,7 @@
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/Noti"
+        app:layout_constraintTop_toBottomOf="@+id/noti"
         app:layout_constraintVertical_bias="0.496" />
 
     <Button
@@ -74,13 +74,13 @@
         android:textAlignment="center"
         android:textAllCaps="true"
         android:textSize="18sp"
-        app:layout_constraintEnd_toStartOf="@+id/Noti"
+        app:layout_constraintEnd_toStartOf="@+id/noti"
         app:layout_constraintHorizontal_bias="0.495"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/Settings_lbl" />
 
     <Switch
-        android:id="@+id/Noti"
+        android:id="@+id/noti"
         android:layout_width="250dp"
         android:layout_height="66dp"
         android:layout_marginTop="48dp"
