@@ -18,7 +18,7 @@ public class questions {
     public String answers[][]={
             {"Mercury","Venus","Mars","Saturn"},
             {"Mercury","Venus","Mars","Saturn"},
-            {"Mercury","Venus","Mars","Saturn"},
+            {"Mercury","Earth","Mars","Saturn"},
             {"Mercury","Venus","Mars","Saturn"},
             {"Jupiter","Venus","Mars","Saturn"},
             {"Mercury","Venus","Saturn","Saturn"},

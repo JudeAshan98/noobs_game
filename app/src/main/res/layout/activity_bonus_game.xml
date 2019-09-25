@@ -11,8 +11,9 @@
     <Button
         android:id="@+id/answer4"
         android:layout_width="313dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="Button"
+        android:background="@drawable/mybtn"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -21,8 +22,9 @@
     <Button
         android:id="@+id/answer3"
         android:layout_width="313dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="Button"
+        android:background="@drawable/mybtn"
         app:layout_constraintBottom_toTopOf="@+id/answer4"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -31,8 +33,9 @@
     <Button
         android:id="@+id/answer2"
         android:layout_width="313dp"
-        android:layout_height="42dp"
+        android:layout_height="40dp"
         android:text="Button"
+        android:background="@drawable/mybtn"
         app:layout_constraintBottom_toTopOf="@+id/answer3"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -41,8 +44,9 @@
     <Button
         android:id="@+id/answer1"
         android:layout_width="313dp"
-        android:layout_height="wrap_content"
+        android:layout_height="40dp"
         android:text="Button"
+        android:background="@drawable/mybtn"
         app:layout_constraintBottom_toTopOf="@+id/answer2"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
@@ -50,11 +54,15 @@
 
     <TextView
         android:id="@+id/score"
-        android:layout_width="71dp"
-        android:layout_height="42dp"
+        android:layout_width="166dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
         android:text="TextView"
+        android:textColor="@color/White"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.047"
+        app:layout_constraintHorizontal_bias="0.934"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -72,4 +80,20 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.213" />
+
+    <TextView
+        android:id="@+id/tries"
+        android:layout_width="171dp"
+        android:layout_height="33dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:text="TextView"
+        android:textColor="@color/White"
+        android:textSize="20sp"
+        app:layout_constraintEnd_toStartOf="@+id/score"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

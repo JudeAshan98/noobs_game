@@ -15,7 +15,7 @@ import java.util.Random;
 public class bonus_game extends AppCompatActivity {
 
     Button answer1 , answer2,answer3,answer4;
-    TextView score , questoin;
+    TextView score , questoin ,tries;
     public String EEt_extra;
 
     private questions mQuestions = new questions();
@@ -23,6 +23,7 @@ public class bonus_game extends AppCompatActivity {
     private String mAnswer;
     private int mScore = 0;
 
+    private int tryies = 10;
     private int mQuestionsLength = mQuestions.mQuestions.length;
 
     Random r;
@@ -46,24 +47,33 @@ public class bonus_game extends AppCompatActivity {
         answer4 = (Button)findViewById(R.id.answer4);
 
         score = (TextView)findViewById(R.id.score);
+        tries = (TextView)findViewById(R.id.tries);
         questoin= (TextView)findViewById(R.id.question);
 
         score.setText("Score : " +mScore);
+        tries.setText("Remaining : "+ tryies);
 
-        updateQuestoin(r.nextInt(mQuestionsLength));
+        updateQuestoin(r.nextInt(tryies));
 
 
         answer1.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                gametale();
                 if(answer1.getText()==mAnswer){
                     mScore = mScore + 10;
                     score.setText("Score : " +mScore);
-                   updateQuestoin(r.nextInt(mQuestionsLength));
+                    tryies --;
+                    tries.setText("Remaining : "+ tryies);
+                    gametale();
+                   updateQuestoin(r.nextInt(tryies));
                 }else{
+                    gametale();
                     wrongAnswer();
-                    updateQuestoin(r.nextInt(mQuestionsLength));
+                    tryies --;
+                    tries.setText("Remaining : "+ tryies);
+//                    gametale();
+                    updateQuestoin(r.nextInt(tryies));
                 }
 
             }
@@ -72,13 +82,20 @@ public class bonus_game extends AppCompatActivity {
         answer2.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                gametale();
                 if(answer2.getText()==mAnswer){
                     mScore = mScore + 10;
                     score.setText("Score : " +mScore);
-                    updateQuestoin(r.nextInt(mQuestionsLength));
+                    tryies --;
+                    tries.setText("Remaining : "+ tryies);
+                    gametale();
+                    updateQuestoin(r.nextInt(tryies));
                 }else{
+                    tryies --;
+                    tries.setText("Remaining : "+ tryies);
                     wrongAnswer();
-                    updateQuestoin(r.nextInt(mQuestionsLength));
+                    gametale();
+                    updateQuestoin(r.nextInt(tryies));
                 }
             }
         });
@@ -86,14 +103,20 @@ public class bonus_game extends AppCompatActivity {
         answer3.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                gametale();
                 if(answer3.getText()==mAnswer){
                     mScore = mScore + 10;
                     score.setText("Score : " +mScore);
-                    updateQuestoin(r.nextInt(mQuestionsLength));
+                    tryies --;
+                    tries.setText("Remaining : "+ tryies);
+                    gametale();
+                    updateQuestoin(r.nextInt(tryies));
                 }else{
+                    tryies --;
+                    tries.setText("Remaining : "+ tryies);
                     wrongAnswer();
-                    updateQuestoin(r.nextInt(mQuestionsLength));
+                    gametale();
+                    updateQuestoin(r.nextInt(tryies));
                 }
             }
         });
@@ -101,14 +124,20 @@ public class bonus_game extends AppCompatActivity {
         answer4.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                gametale();
                 if(answer4.getText()==mAnswer){
                     mScore = mScore + 10;
                     score.setText("Score : " +mScore);
-                    updateQuestoin(r.nextInt(mQuestionsLength));
+                    tryies --;
+                    tries.setText("Remaining : "+ tryies);
+                    gametale();
+                    updateQuestoin(r.nextInt(tryies));
                 }else{
+                    tryies --;
+                    tries.setText("Remaining : "+ tryies);
                     wrongAnswer();
-                    updateQuestoin(r.nextInt(mQuestionsLength));
+                    gametale();
+                    updateQuestoin(r.nextInt(tryies));
                 }
             }
         });
@@ -152,16 +181,25 @@ public class bonus_game extends AppCompatActivity {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(bonus_game.this);
         alertDialogBuilder
                 .setMessage("Game Over ! Your Score is :" + score)
-                .setCancelable(true)
-                .setPositiveButton("Try Agin",
-                        new DialogInterface.OnClickListener() {
-                            @Override
-                            public void onClick(DialogInterface dialog, int which) {
-                                startActivity( new Intent(getApplicationContext(),bonus_game.class));
-                            }
-                        });
+                .setCancelable(true);
+//                .setPositiveButton("Try Agin",
+//                        new DialogInterface.OnClickListener() {
+//                            @Override
+//                            public void onClick(DialogInterface dialog, int which) {
+//                                startActivity( new Intent(getApplicationContext(),bonus_game.class));
+//                            }
+//                        });
 
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
+    }
+    private void gametale(){
+        if( tryies == 0){
+            gameOver();
+        }
+        else
+        {
+            onResume();
+        }
     }
 }
