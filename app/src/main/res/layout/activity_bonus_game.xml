@@ -74,6 +74,7 @@
         android:textColor="@color/White"
         android:textAllCaps="false"
         android:textSize="20sp"
+        android:paddingLeft="30dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.473"
@@ -84,6 +85,7 @@
     <TextView
         android:id="@+id/tries"
         android:layout_width="171dp"
+        android:gravity="center_horizontal"
         android:layout_height="33dp"
         android:layout_marginStart="16dp"
         android:layout_marginLeft="16dp"

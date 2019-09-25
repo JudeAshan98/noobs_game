@@ -65,10 +65,10 @@ public class bonus_game extends AppCompatActivity {
                     score.setText("Score : " +mScore);
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
-                    gametale();
+//                    gametale();
                    updateQuestoin(r.nextInt(tryies));
                 }else{
-                    gametale();
+//                    gametale();
                     wrongAnswer();
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
@@ -88,13 +88,13 @@ public class bonus_game extends AppCompatActivity {
                     score.setText("Score : " +mScore);
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
-                    gametale();
+//                    gametale();
                     updateQuestoin(r.nextInt(tryies));
                 }else{
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
                     wrongAnswer();
-                    gametale();
+//                    gametale();
                     updateQuestoin(r.nextInt(tryies));
                 }
             }
@@ -109,13 +109,13 @@ public class bonus_game extends AppCompatActivity {
                     score.setText("Score : " +mScore);
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
-                    gametale();
+//                    gametale();
                     updateQuestoin(r.nextInt(tryies));
                 }else{
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
                     wrongAnswer();
-                    gametale();
+//                    gametale();
                     updateQuestoin(r.nextInt(tryies));
                 }
             }
@@ -130,13 +130,13 @@ public class bonus_game extends AppCompatActivity {
                     score.setText("Score : " +mScore);
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
-                    gametale();
+//                    gametale();
                     updateQuestoin(r.nextInt(tryies));
                 }else{
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
                     wrongAnswer();
-                    gametale();
+//                    gametale();
                     updateQuestoin(r.nextInt(tryies));
                 }
             }

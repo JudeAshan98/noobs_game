@@ -11,66 +11,71 @@
         android:id="@+id/b_higher"
         android:layout_width="289dp"
         android:layout_height="52dp"
-        android:layout_marginTop="72dp"
-        android:textAllCaps="false"
-        android:text="Higher"
         android:background="@drawable/mybtn"
+        android:drawableRight="@android:drawable/arrow_up_float"
+        android:text="Higher"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/b_yes"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.594"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/tv_info" />
+        app:layout_constraintTop_toBottomOf="@+id/tv_info"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/b_yes"
         android:layout_width="289dp"
         android:layout_height="52dp"
-        android:layout_marginTop="32dp"
-        android:textAllCaps="false"
         android:background="@drawable/mybtn"
         android:text="Yes"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/b_lower"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.588"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b_higher" />
+        app:layout_constraintTop_toBottomOf="@+id/b_higher"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/b_lower"
         android:layout_width="289dp"
         android:layout_height="52dp"
-        android:layout_marginTop="24dp"
-        android:textAllCaps="false"
+        android:layout_marginBottom="36dp"
         android:background="@drawable/mybtn"
+        android:drawableRight="@android:drawable/arrow_down_float"
         android:text="Lower"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.628"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b_yes" />
-
-    <TextView
-        android:id="@+id/tv_info"
-        android:layout_width="250dp"
-        android:layout_height="114dp"
-        android:layout_marginTop="76dp"
-        android:gravity="center"
-        android:text="TextView"
-        android:textColor="@color/White"
-        android:textSize="25sp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.549"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/b_yes"
+        tools:ignore="MissingConstraints" />
 
     <Button
         android:id="@+id/b_ok"
         android:layout_width="153dp"
         android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
         android:background="@drawable/mybtn"
         android:text="Ok"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/b_lower"
-        app:layout_constraintVertical_bias="0.755" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.902" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="383dp"
+        android:layout_height="88dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@color/White"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/b_higher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
