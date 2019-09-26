@@ -48,7 +48,7 @@ public class FlagGame extends AppCompatActivity {
 
     String[] flagsNames;
     Integer [] images;
-
+    String uname, gname;
 
 
 
@@ -87,7 +87,8 @@ public class FlagGame extends AppCompatActivity {
         score.setText("Score is :" + mscore);
         itemsOnSpinner();
 
-
+        uname = "Laka";
+        gname = "bomus";
 
 //        r = new Random(flagsNames.length);
         r = new Random(10);
@@ -127,14 +128,14 @@ public class FlagGame extends AppCompatActivity {
                     countDownTimer.cancel();
                 } else {
 
-                    round--;
-                    GameOver();
+//                    round--;
+//                    GameOver();
                     if (countDownTimer != null) {
                         countDownTimer.cancel();
                     }
 
-                    round--;
-                    GameOver();
+//                    round--;
+//                    GameOver();
                     generateFlag();
 
                 }
@@ -236,8 +237,8 @@ public class FlagGame extends AppCompatActivity {
                                 startActivity( new Intent(getApplicationContext(),FlagGame.class));
                              dbref = FirebaseDatabase.getInstance().getReference().child("User");
                               final  DbGame d = new DbGame();
-                                d.setUname("Jude");
-                                d.setGame("Kala");
+                                d.setUname(uname);
+                                d.setGame(gname);
                                 d.setScore(mscore);
                              dbref.addListenerForSingleValueEvent(new ValueEventListener() {
                                  @Override
@@ -247,7 +248,7 @@ public class FlagGame extends AppCompatActivity {
                                             // int i =Integer.parseInt(dataSnapshot.child(d.getUname()).child(d.getGame()).child("score").getValue().toString());
                                              dbref.child(d.getUname()).child(d.getGame()).child("score").setValue(mscore);
                                          }else{
-                                             DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child(d.getUname()).child(d.getGame());
+                                             DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("User").child(d.getUname()).child(d.getGame());
                                              ref.setValue(d);
                                          }
                                      }else {
