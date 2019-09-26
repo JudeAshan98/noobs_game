@@ -24,7 +24,7 @@ public class bonusLevel extends AppCompatActivity{
         btn1.setOnClickListener(new View.OnClickListener(){
           @Override
                   public void onClick(View view){
-                  Intent intent =  new Intent(bonusLevel.this, settings.class);
+                  Intent intent =  new Intent(bonusLevel.this, bonus_game.class);
                   intent.putExtra("testExtra",noobExtra);
                   startActivity(intent);
                 }

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/back_ground"
+    tools:context=".mind_num_reader">
+
+    <Button
+        android:id="@+id/b_higher"
+        android:layout_width="289dp"
+        android:layout_height="52dp"
+        android:background="@drawable/mybtn"
+        android:drawableRight="@android:drawable/arrow_up_float"
+        android:text="Higher"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/b_yes"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_info"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/b_yes"
+        android:layout_width="289dp"
+        android:layout_height="52dp"
+        android:background="@drawable/mybtn"
+        android:text="Yes"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toTopOf="@+id/b_lower"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_higher"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/b_lower"
+        android:layout_width="289dp"
+        android:layout_height="52dp"
+        android:layout_marginBottom="36dp"
+        android:background="@drawable/mybtn"
+        android:drawableRight="@android:drawable/arrow_down_float"
+        android:text="Lower"
+        android:textAllCaps="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/b_yes"
+        tools:ignore="MissingConstraints" />
+
+    <Button
+        android:id="@+id/b_ok"
+        android:layout_width="153dp"
+        android:layout_height="48dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:background="@drawable/mybtn"
+        android:text="Ok"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.97"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.902" />
+
+    <TextView
+        android:id="@+id/tv_info"
+        android:layout_width="383dp"
+        android:layout_height="88dp"
+        android:gravity="center"
+        android:text="TextView"
+        android:textColor="@color/White"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/b_higher"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
