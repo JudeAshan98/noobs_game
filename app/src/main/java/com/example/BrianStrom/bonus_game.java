@@ -6,6 +6,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -53,7 +54,7 @@ public class bonus_game extends AppCompatActivity {
         score.setText("Score : " +mScore);
         tries.setText("Remaining : "+ tryies);
 
-        updateQuestoin(r.nextInt(tryies));
+        updateQuestoin(r.nextInt(mQuestionsLength));
 
 
         answer1.setOnClickListener(new View.OnClickListener() {
@@ -65,15 +66,17 @@ public class bonus_game extends AppCompatActivity {
                     score.setText("Score : " +mScore);
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
+                    Log.i("NextQuiz","="+(r.nextInt(mQuestionsLength)));
 //                    gametale();
-                   updateQuestoin(r.nextInt(tryies));
+                   updateQuestoin(r.nextInt(mQuestionsLength));
                 }else{
 //                    gametale();
                     wrongAnswer();
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
 //                    gametale();
-                    updateQuestoin(r.nextInt(tryies));
+                    Log.i("NextQuiz","="+(r.nextInt(tryies+1)));
+                    updateQuestoin(r.nextInt(mQuestionsLength));
                 }
 
             }
@@ -89,13 +92,13 @@ public class bonus_game extends AppCompatActivity {
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
 //                    gametale();
-                    updateQuestoin(r.nextInt(tryies));
+                    updateQuestoin(r.nextInt(mQuestionsLength));
                 }else{
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
                     wrongAnswer();
 //                    gametale();
-                    updateQuestoin(r.nextInt(tryies));
+                    updateQuestoin(r.nextInt(mQuestionsLength));
                 }
             }
         });
@@ -110,13 +113,13 @@ public class bonus_game extends AppCompatActivity {
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
 //                    gametale();
-                    updateQuestoin(r.nextInt(tryies));
+                    updateQuestoin(r.nextInt(mQuestionsLength));
                 }else{
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
                     wrongAnswer();
 //                    gametale();
-                    updateQuestoin(r.nextInt(tryies));
+                    updateQuestoin(r.nextInt(mQuestionsLength));
                 }
             }
         });
@@ -131,13 +134,13 @@ public class bonus_game extends AppCompatActivity {
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
 //                    gametale();
-                    updateQuestoin(r.nextInt(tryies));
+                    updateQuestoin(r.nextInt(mQuestionsLength));
                 }else{
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
                     wrongAnswer();
 //                    gametale();
-                    updateQuestoin(r.nextInt(tryies));
+                    updateQuestoin(r.nextInt(mQuestionsLength));
                 }
             }
         });
@@ -180,15 +183,15 @@ public class bonus_game extends AppCompatActivity {
     private void gameOver() {
         AlertDialog.Builder alertDialogBuilder = new AlertDialog.Builder(bonus_game.this);
         alertDialogBuilder
-                .setMessage("Game Over ! Your Score is :" + score)
-                .setCancelable(true);
-//                .setPositiveButton("Try Agin",
-//                        new DialogInterface.OnClickListener() {
-//                            @Override
-//                            public void onClick(DialogInterface dialog, int which) {
-//                                startActivity( new Intent(getApplicationContext(),bonus_game.class));
-//                            }
-//                        });
+                .setMessage("Game Over ! Your Score is :" + mScore)
+                .setCancelable(true)
+                .setPositiveButton("Try Agin",
+                        new DialogInterface.OnClickListener() {
+                            @Override
+                            public void onClick(DialogInterface dialog, int which) {
+                                startActivity( new Intent(getApplicationContext(),bonus_game.class));
+                            }
+                        });
 
         AlertDialog alertDialog = alertDialogBuilder.create();
         alertDialog.show();
@@ -196,6 +199,7 @@ public class bonus_game extends AppCompatActivity {
     private void gametale(){
         if( tryies == 0){
             gameOver();
+            //finish();
         }
         else
         {
