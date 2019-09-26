@@ -16,7 +16,7 @@ public class settings extends AppCompatActivity {
 
     String myT = "text";
     String takeExtra;
-    Button btn;
+    Button btn,buttonh;
     Button btnbonus;
     Switch sound, noti;
 
@@ -33,6 +33,7 @@ public class settings extends AppCompatActivity {
         noti  = (Switch)findViewById(R.id.noti);
 
         btn = (Button)findViewById(R.id.button);
+//        button5 =(Button)findViewById(R.id.button5);
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -50,6 +51,16 @@ public class settings extends AppCompatActivity {
                 startActivity(intent);
             }
         });
+        buttonh = (Button)findViewById(R.id.button5);
+        buttonh.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(settings.this, FlagGame.class);
+                intent.putExtra("test",myT);
+                startActivity(intent);
+            }
+        });
+
 
         //sound on off function
 

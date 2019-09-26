@@ -27,6 +27,8 @@ public class bonus_game extends AppCompatActivity {
     private int tryies = 10;
     private int mQuestionsLength = mQuestions.mQuestions.length;
 
+
+
     Random r;
 
 
@@ -67,14 +69,14 @@ public class bonus_game extends AppCompatActivity {
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
                     Log.i("NextQuiz","="+(r.nextInt(mQuestionsLength)));
-//                    gametale();
-                   updateQuestoin(r.nextInt(mQuestionsLength));
+                    gametale();
+                    updateQuestoin(r.nextInt(mQuestionsLength));
                 }else{
-//                    gametale();
+                    gametale();
                     wrongAnswer();
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
-//                    gametale();
+                    gametale();
                     Log.i("NextQuiz","="+(r.nextInt(tryies+1)));
                     updateQuestoin(r.nextInt(mQuestionsLength));
                 }
@@ -91,13 +93,13 @@ public class bonus_game extends AppCompatActivity {
                     score.setText("Score : " +mScore);
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
-//                    gametale();
+                    gametale();
                     updateQuestoin(r.nextInt(mQuestionsLength));
                 }else{
+                    gametale();
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
                     wrongAnswer();
-//                    gametale();
                     updateQuestoin(r.nextInt(mQuestionsLength));
                 }
             }
@@ -112,13 +114,13 @@ public class bonus_game extends AppCompatActivity {
                     score.setText("Score : " +mScore);
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
-//                    gametale();
+                    gametale();
                     updateQuestoin(r.nextInt(mQuestionsLength));
                 }else{
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
+                    gametale();
                     wrongAnswer();
-//                    gametale();
                     updateQuestoin(r.nextInt(mQuestionsLength));
                 }
             }
@@ -133,13 +135,13 @@ public class bonus_game extends AppCompatActivity {
                     score.setText("Score : " +mScore);
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
-//                    gametale();
+                    gametale();
                     updateQuestoin(r.nextInt(mQuestionsLength));
                 }else{
                     tryies --;
                     tries.setText("Remaining : "+ tryies);
+                    gametale();
                     wrongAnswer();
-//                    gametale();
                     updateQuestoin(r.nextInt(mQuestionsLength));
                 }
             }
