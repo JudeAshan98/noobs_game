@@ -11,15 +11,15 @@
         android:id="@+id/max_min_btn"
         android:layout_width="300dp"
         android:layout_height="80dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
         android:background="@drawable/mybtn"
         android:text="Level 2"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/flag_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.711"
-        app:layout_constraintStart_toStartOf="parent"
         android:textAllCaps="false"
-        app:layout_constraintTop_toBottomOf="@+id/game1_btn" />
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/game_4_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/bonus_btn"
@@ -27,27 +27,26 @@
         android:layout_height="80dp"
         android:background="@drawable/mybtn"
         android:text="Bonus Level"
+        android:textAllCaps="false"
+        android:textSize="25sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.711"
-        android:textSize="25sp"
         app:layout_constraintStart_toStartOf="parent"
-        android:textAllCaps="false"
         app:layout_constraintTop_toBottomOf="@+id/game_4_btn" />
 
     <Button
         android:id="@+id/game_4_btn"
         android:layout_width="300dp"
         android:layout_height="80dp"
+        android:layout_marginEnd="28dp"
+        android:layout_marginRight="28dp"
+        android:layout_marginBottom="136dp"
         android:background="@drawable/mybtn"
         android:text="Level 4"
-        android:textSize="25sp"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@+id/bonus_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.711"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/flag_btn" />
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
 
     <Button
         android:id="@+id/game1_btn"
@@ -55,11 +54,11 @@
         android:layout_height="80dp"
         android:background="@drawable/mybtn"
         android:text="Swap Level"
-        android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/max_min_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.711"
         android:textAllCaps="false"
+        android:textSize="25sp"
+        app:layout_constraintBottom_toTopOf="@+id/flag_btn"
+        app:layout_constraintEnd_toStartOf="@+id/max_min_btn"
+        app:layout_constraintHorizontal_bias="0.745"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -67,14 +66,14 @@
         android:id="@+id/flag_btn"
         android:layout_width="300dp"
         android:layout_height="80dp"
+        android:layout_marginBottom="136dp"
         android:background="@drawable/mybtn"
-        android:textSize="25sp"
         android:text="Flag Level"
         android:textAllCaps="false"
-        app:layout_constraintBottom_toTopOf="@+id/game_4_btn"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.711"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/max_min_btn" />
+        android:textSize="25sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/game_4_btn"
+        app:layout_constraintHorizontal_bias="0.745"
+        app:layout_constraintStart_toStartOf="parent" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
