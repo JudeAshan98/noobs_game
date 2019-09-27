@@ -37,7 +37,7 @@ public class settings extends AppCompatActivity {
         btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(settings.this, observation_level.class);
+                Intent intent = new Intent(settings.this, more_games.class);
                 intent.putExtra("test",myT);
                 startActivity(intent);
             }
