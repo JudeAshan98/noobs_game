@@ -42,7 +42,7 @@ public class settings extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-        btnbonus = (Button)findViewById(R.id.button2);
+       /* btnbonus = (Button)findViewById(R.id.button2);
         btnbonus.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -60,7 +60,7 @@ public class settings extends AppCompatActivity {
                 startActivity(intent);
             }
         });
-
+*/
 
         //sound on off function
 

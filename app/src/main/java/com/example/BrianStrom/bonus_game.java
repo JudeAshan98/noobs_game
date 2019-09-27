@@ -1,5 +1,6 @@
 package com.example.BrianStrom;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AlertDialog;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -10,6 +11,13 @@ import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
+
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 
 import java.util.Random;
 
@@ -20,6 +28,7 @@ public class bonus_game extends AppCompatActivity {
     public String EEt_extra;
 
     private questions mQuestions = new questions();
+    DatabaseReference dbref;
 
     private String mAnswer;
     private int mScore = 0;
@@ -27,7 +36,7 @@ public class bonus_game extends AppCompatActivity {
     private int tryies = 10;
     private int mQuestionsLength = mQuestions.mQuestions.length;
 
-
+    String uname, gname;
 
     Random r;
 
@@ -49,9 +58,14 @@ public class bonus_game extends AppCompatActivity {
         answer3 = (Button)findViewById(R.id.answer3);
         answer4 = (Button)findViewById(R.id.answer4);
 
+        DatabaseReference dbref;
+
         score = (TextView)findViewById(R.id.score);
         tries = (TextView)findViewById(R.id.tries);
         questoin= (TextView)findViewById(R.id.question);
+
+        uname = "Jude";
+        gname = "Bonus Quiz";
 
         score.setText("Score : " +mScore);
         tries.setText("Remaining : "+ tryies);
@@ -189,9 +203,39 @@ public class bonus_game extends AppCompatActivity {
                 .setCancelable(true)
                 .setPositiveButton("Try Agin",
                         new DialogInterface.OnClickListener() {
+
                             @Override
                             public void onClick(DialogInterface dialog, int which) {
                                 startActivity( new Intent(getApplicationContext(),bonus_game.class));
+
+                                dbref = FirebaseDatabase.getInstance().getReference().child("User");
+                                final  DbGame d = new DbGame();
+                                d.setUname(uname);
+                                d.setGame(gname);
+                                d.setScore(mScore);
+                                dbref.addListenerForSingleValueEvent(new ValueEventListener() {
+                                    @Override
+                                    public void onDataChange(@NonNull DataSnapshot dataSnapshot) {
+                                        if(dataSnapshot.hasChild(d.getUname())){
+                                            if(dataSnapshot.child(d.getUname()).hasChild(d.getGame())){
+                                                // int i =Integer.parseInt(dataSnapshot.child(d.getUname()).child(d.getGame()).child("score").getValue().toString());
+                                                dbref.child(d.getUname()).child(d.getGame()).child("score").setValue(mScore);
+                                            }else{
+                                                DatabaseReference ref = FirebaseDatabase.getInstance().getReference().child("User").child(d.getUname()).child(d.getGame());
+                                                ref.setValue(d);
+                                            }
+                                        }else {
+                                            dbref.child(d.getUname()).child(d.getGame()).setValue(d);
+//                                            Toast.makeText(getApplicationContext(),"Data inset Succesfully",Toast.LENGTH_SHORT).show();
+                                        }
+                                    }
+
+
+                                    @Override
+                                    public void onCancelled(@NonNull DatabaseError databaseError) {
+
+                                    }
+                                });
                             }
                         });
 
