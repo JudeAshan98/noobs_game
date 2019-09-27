@@ -14,6 +14,11 @@
         <activity android:name=".more_games" />
         <activity android:name=".Instructions"/>
         <activity android:name=".Score"/>
+        <activity android:name=".observe02"/>
+        <activity android:name=".observe03"/>
+        <activity android:name=".observe04"/>
+        <activity android:name=".observe05"/>
+        <activity android:name=".observe06"/>
         <activity android:name=".land_on_page"/>
         <activity android:name=".FlagGame" />
         <activity android:name=".bonus_game" />
