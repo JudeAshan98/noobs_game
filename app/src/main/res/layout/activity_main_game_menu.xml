@@ -55,11 +55,11 @@
         android:layout_height="80dp"
         android:background="@drawable/mybtn"
         android:text="Swap Level"
+        android:textAllCaps="false"
         android:textSize="25sp"
         app:layout_constraintBottom_toTopOf="@+id/max_min_btn"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.711"
-        android:textAllCaps="false"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
