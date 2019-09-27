@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class observe04 extends AppCompatActivity {
 
     Button observe04;
@@ -20,7 +23,7 @@ public class observe04 extends AppCompatActivity {
     private  int ans04;
 
     ScoreCal Anwser04;
-   // private DatabaseReference reff4;
+    private DatabaseReference reff4;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,7 +39,7 @@ public class observe04 extends AppCompatActivity {
         observe04= (Button)findViewById(R.id.Observe04);
 
         Anwser04=new ScoreCal();
-      //  reff4= FirebaseDatabase.getInstance().getReference().child("ScoreCal");
+        reff4= FirebaseDatabase.getInstance().getReference().child("Observe").child("4").child("ScoreCal");
 
         observe04.setOnClickListener(new View.OnClickListener() {
             @Override

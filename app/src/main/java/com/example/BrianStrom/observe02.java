@@ -10,6 +10,9 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+
 public class observe02 extends AppCompatActivity {
 
     Button observe02;
@@ -20,7 +23,7 @@ public class observe02 extends AppCompatActivity {
     private  int ans02;
 
     ScoreCal Anwser02;
-  //  private DatabaseReference reff2;
+    private DatabaseReference reff2;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -35,7 +38,7 @@ public class observe02 extends AppCompatActivity {
         Ans02=(EditText)findViewById(R.id.Ans02);
         observe02= (Button)findViewById(R.id.Observe02);
         Anwser02=new ScoreCal();
-     //   reff2= FirebaseDatabase.getInstance().getReference().child("ScoreCal");
+        reff2= FirebaseDatabase.getInstance().getReference().child("Observe").child("2").child("ScoreCal");
 
         observe02.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -62,7 +65,7 @@ public class observe02 extends AppCompatActivity {
 
 
                 Anwser02.setAns01(ans02);
-              //  reff2.push().setValue(Anwser02);
+               reff2.push().setValue(Anwser02);
                 Toast.makeText(observe02.this, "Correct Anwser", Toast.LENGTH_LONG).show();
                 Intent OB02 = new Intent(observe02.this, observe03.class);
                 OB02.putExtra("observe02", myT2);
