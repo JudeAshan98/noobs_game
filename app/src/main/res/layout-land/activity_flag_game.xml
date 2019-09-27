@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F2F31"
+    tools:context=".FlagGame">
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="304dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="40dp"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginBottom="40dp"
+        android:outlineSpotShadowColor="#FF9800"
+        android:popupBackground="@color/White"
+        android:background="@color/White"
+        android:textColor="@color/White"/>
+
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="293dp"
+        android:layout_height="177dp"
+        android:layout_below="@+id/spinner"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="41dp"
+        android:layout_marginLeft="41dp"
+        android:layout_marginTop="71dp"
+        android:scaleType="centerInside" />
+
+    <Button
+        android:id="@+id/btflagsubmit"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="173dp"
+        android:layout_marginRight="173dp"
+        android:layout_marginBottom="18dp"
+        android:background="@drawable/btn2_drawable"
+        android:text="submit"
+        android:textColor="#FF9800"
+        android:textSize="20dp" />
+
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="121dp"
+        android:layout_height="46dp"
+        android:layout_alignBottom="@+id/imageView"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginEnd="124dp"
+        android:layout_marginRight="124dp"
+        android:layout_marginBottom="32dp"
+        android:text="TextView"
+        android:textColor="#FF9800"
+        android:textSize="20dp" />
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="167dp"
+        android:layout_height="51dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="84dp"
+        android:layout_marginRight="84dp"
+        android:layout_marginBottom="247dp"
+        android:text="TextView"
+        android:textColor="@color/White"
+        android:textSize="22dp" />
+
+    <TextView
+        android:id="@+id/timer"
+        android:layout_width="56dp"
+        android:layout_height="28dp"
+        android:layout_alignTop="@+id/textView5"
+        android:layout_marginTop="-1dp"
+        android:layout_marginEnd="325dp"
+        android:layout_marginRight="325dp"
+        android:layout_toStartOf="@+id/textView3"
+        android:layout_toLeftOf="@+id/textView3"
+        android:text="TextView"
+        android:textColor="@color/White"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        tools:text="00:10" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/imageView"
+        android:layout_marginBottom="101dp"
+        android:text="timer"
+        android:textColor= "@color/White"
+        android:textSize="17dp"
+        android:textStyle="bold"
+        android:layout_alignLeft="@+id/imageView" />
+
+    <TextView
+        android:id="@+id/score"
+        android:layout_width="182dp"
+        android:layout_height="49dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="343dp"
+        android:layout_marginLeft="343dp"
+        android:layout_marginTop="159dp"
+        android:layout_marginEnd="158dp"
+        android:text="TextView"
+        android:textColor="@color/White"
+        tools:ignore="RtlCompat" />
+
+</RelativeLayout>
