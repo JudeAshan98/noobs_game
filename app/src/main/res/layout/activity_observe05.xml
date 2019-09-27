@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#2F2F31"
+    tools:context=".observe05">
+
+    <Button
+        android:id="@+id/Observe05"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="42dp"
+        android:layout_marginBottom="62dp"
+        android:background="@drawable/mybtn"
+        android:text="NEXT"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Ans01" />
+
+    <EditText
+        android:id="@+id/Ans05"
+        android:layout_width="242dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="34dp"
+        android:layout_marginBottom="59dp"
+        android:background="@android:color/background_light"
+        android:editable="true"
+        android:ems="10"
+        android:inputType="number"
+        app:layout_constraintBottom_toTopOf="@id/Observe05"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.55"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageView5" />
+
+    <ImageView
+        android:id="@+id/imageView5"
+        android:layout_width="353dp"
+        android:layout_height="313dp"
+        android:layout_marginTop="14dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView7"
+        app:srcCompat="@drawable/image05" />
+
+    <TextView
+        android:id="@+id/textView7"
+        android:layout_width="292dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="28dp"
+        android:layout_marginBottom="14dp"
+        android:gravity="center"
+        android:text="Smallest number"
+        android:textColor="@android:color/background_light"
+        android:textSize="36sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/imageView5"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.596"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

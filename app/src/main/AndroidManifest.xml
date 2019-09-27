@@ -12,9 +12,14 @@
         <activity android:name=".MainGameMenu"></activity>
         <activity android:name=".mind_num_reader" />
         <activity android:name=".more_games" />
+        <activity android:name=".Instructions"/>
+        <activity android:name=".Score"/>
+        <activity android:name=".land_on_page"/>
         <activity android:name=".FlagGame" />
         <activity android:name=".bonus_game" />
         <activity android:name=".settings" />
+        <activity android:name=".observe01"/>
+        <activity android:name=".observation_level"/>
         <activity android:name=".bonusLevel" />
         <activity android:name=".splash">
             <intent-filter>

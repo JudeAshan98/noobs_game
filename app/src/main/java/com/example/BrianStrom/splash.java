@@ -31,7 +31,7 @@ public class splash extends AppCompatActivity {
                 }catch (Exception e){
                     e.printStackTrace();
                 }finally {
-                    Intent intent = new Intent(getApplicationContext(),MainGameMenu.class);
+                    Intent intent = new Intent(getApplicationContext(),land_on_page.class);
                     startActivity(intent);
                     finish();
                 }

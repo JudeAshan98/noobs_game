@@ -10,13 +10,16 @@ import android.widget.Button;
 public class MainGameMenu extends AppCompatActivity {
 
     Button game1_btn,flag_btn,max_min_btn,game_4_btn,bonus_btn;
-    private String IntentGo = "test";
+    private String IntentGo = "test",EEt_extra;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_game_menu);
 
+
+        Intent testInt = new Intent();
+        EEt_extra = testInt.getStringExtra("test");
 
         game1_btn = (Button)findViewById(R.id.game1_btn);
         flag_btn = (Button)findViewById(R.id.flag_btn);
@@ -61,14 +64,14 @@ public class MainGameMenu extends AppCompatActivity {
             }
         });*/
 
-       /* game_4_btn.setOnClickListener(new View.OnClickListener() {
+        game_4_btn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainGameMenu.this, game_4_btn.class);
+                Intent intent = new Intent(MainGameMenu.this, observation_level.class);
                 intent.putExtra(IntentGo,"test");
                 startActivity(intent);
             }
-        });*/
+        });
 
 
     }
