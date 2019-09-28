@@ -11,6 +11,7 @@ public class MainGameMenu extends AppCompatActivity {
 
     Button game1_btn,flag_btn,max_min_btn,game_4_btn,bonus_btn;
     private String IntentGo = "test",EEt_extra;
+    public  String MENU;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -20,6 +21,9 @@ public class MainGameMenu extends AppCompatActivity {
 
         Intent testInt = new Intent();
         EEt_extra = testInt.getStringExtra("test");
+
+        Intent testIntq = new Intent();
+        MENU = testIntq.getStringExtra("test");
 
         game1_btn = (Button)findViewById(R.id.game1_btn);
         flag_btn = (Button)findViewById(R.id.flag_btn);

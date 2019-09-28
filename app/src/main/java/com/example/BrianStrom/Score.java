@@ -10,7 +10,8 @@ import android.widget.Button;
 public class Score extends AppCompatActivity {
 
     public String EEt_extra6;
-    public  String MENU="MENU";
+    public  String MENU="test";
+
 
     private Button menu;
 
@@ -30,7 +31,7 @@ public class Score extends AppCompatActivity {
             public void onClick(View view) {
 
                 Intent MENU = new Intent(Score.this,MainGameMenu.class);
-                MENU.putExtra("MENU",MENU);
+                MENU.putExtra("test",MENU);
                 startActivity(MENU);
             }
         });
