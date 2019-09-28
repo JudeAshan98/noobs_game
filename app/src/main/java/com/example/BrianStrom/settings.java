@@ -50,17 +50,16 @@ public class settings extends AppCompatActivity {
                 intent.putExtra("test",myT);
                 startActivity(intent);
             }
-        });
+        });*/
         buttonh = (Button)findViewById(R.id.button5);
         buttonh.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(settings.this, FlagGame.class);
+                Intent intent = new Intent(settings.this, userprofile.class);
                 intent.putExtra("test",myT);
                 startActivity(intent);
             }
         });
-*/
 
         //sound on off function
 

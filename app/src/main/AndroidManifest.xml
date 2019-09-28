@@ -12,6 +12,7 @@
         <activity android:name=".MainGameMenu"></activity>
         <activity android:name=".mind_num_reader" />
         <activity android:name=".more_games" />
+        <activity android:name=".userprofile"/>
         <activity android:name=".Instructions"/>
         <activity android:name=".Score"/>
         <activity android:name=".observe02"/>
